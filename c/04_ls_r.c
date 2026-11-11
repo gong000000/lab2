@@ -1,13 +1,5 @@
 /*
- * 4번 과제: ls -R과 같이 디렉토리를 재귀적으로 나열
- *
- * 실행:
- *   make bin/04_ls_r
- *   ./bin/04_ls_r .
- *   ./bin/04_ls_r /tmp
- *
- * ls -R과 비교:
- *   diff <(./bin/04_ls_r .) <(ls -R .)
+ * 4번: 디렉토리 재귀 탐색 (ls -R)
  */
 #include <dirent.h>
 #include <errno.h>

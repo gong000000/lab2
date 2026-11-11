@@ -1,15 +1,7 @@
 /*
- * 8번 과제: 파이프를 사용한 텍스트 채팅
+ * 8번: 파이프 채팅
  *
- * 두 개의 이름 있는 파이프(FIFO)를 사용한다.
- *   /tmp/lab2_chat_a2b : alice -> bob
- *   /tmp/lab2_chat_b2a : bob -> alice
- *
- * 사용법:
- *   터미널 1: ./bin/08_pipe_chat alice
- *   터미널 2: ./bin/08_pipe_chat bob
- *
- * 종료하려면 한쪽에서 quit을 입력한다.
+ * 사용법: ./bin/08_pipe_chat alice|bob
  */
 #include <errno.h>
 #include <fcntl.h>

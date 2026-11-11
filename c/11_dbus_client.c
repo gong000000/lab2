@@ -1,16 +1,5 @@
 /*
- * 11번 과제: DBus 알림 메시지 클라이언트
- *
- * 서버의 org.example.Lab2Notify.Notify 메서드를 호출해서 문자열을 전달한다.
- *
- * 빌드:
- *   sudo apt install -y libdbus-1-dev pkg-config
- *   gcc -Wall -Wextra -g $(pkg-config --cflags dbus-1) \
- *       11_dbus_client.c -o bin/11_dbus_client $(pkg-config --libs dbus-1)
- *
- * 실행:
- *   dbus-run-session -- bash
- *   ./bin/11_dbus_client "Hello from client"
+ * 11번: DBus 알림 클라이언트
  */
 #include <dbus/dbus.h>
 #include <stdio.h>

@@ -1,16 +1,5 @@
 /*
- * 6번 과제: 프로세스와 시그널 연습
- *
- * 연습하는 함수:
- *   getpid, getppid, fork, waitpid, execlp,
- *   sigaction, raise, alarm, pause
- *
- * 실행:
- *   make bin/06_process_signal
- *   ./bin/06_process_signal
- *
- * 실행 중 Ctrl-C를 누르면 SIGINT 처리기가 동작한다.
- * 2초 동안 Ctrl-C를 누르지 않으면 SIGALRM 처리기가 동작하고 종료한다.
+ * 6번: 프로세스 및 시그널
  */
 #include <signal.h>
 #include <stdio.h>

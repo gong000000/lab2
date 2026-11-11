@@ -1,11 +1,7 @@
 /*
- * 10번 과제: POSIX 공유 메모리/mmap을 사용한 파일 복사
+ * 10번: mmap 파일 복사
  *
- * 사용법:
- *   ./bin/10_mmap_copy 원본파일 대상파일
- *
- * 원본 파일을 MAP_PRIVATE로, 대상 파일을 MAP_SHARED로 매핑한 뒤
- * memcpy()로 내용을 복사하고 msync()로 디스크에 반영한다.
+ * 사용법: ./bin/10_mmap_copy <원본> <대상>
  */
 #include <errno.h>
 #include <fcntl.h>

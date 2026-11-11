@@ -1,15 +1,5 @@
 /*
- * 7번 과제: 프로세스 간 통신(IPC) 함수 연습
- *
- * 연습하는 기법:
- *   1) 익명 파이프(pipe)
- *   2) 이름 있는 파이프(FIFO, mkfifo)
- *   3) POSIX 공유 메모리(shm_open + mmap)
- *   4) POSIX 세마포어(sem_open)
- *
- * 실행:
- *   make bin/07_ipc_practice
- *   ./bin/07_ipc_practice
+ * 7번: IPC 함수 연습
  */
 #include <errno.h>
 #include <fcntl.h>

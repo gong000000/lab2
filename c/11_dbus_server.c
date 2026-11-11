@@ -1,17 +1,5 @@
 /*
- * 11번 과제: DBus 알림 메시지 서버
- *
- * 세션 버스에 org.example.Lab2Notify 이름을 등록하고,
- * /org/example/Lab2Notify 객체의 org.example.Lab2Notify.Notify 메서드를 처리한다.
- *
- * 빌드:
- *   sudo apt install -y libdbus-1-dev pkg-config
- *   gcc -Wall -Wextra -g $(pkg-config --cflags dbus-1) \
- *       11_dbus_server.c -o bin/11_dbus_server $(pkg-config --libs dbus-1)
- *
- * 실행:
- *   dbus-run-session -- bash
- *   ./bin/11_dbus_server
+ * 11번: DBus 알림 서버
  */
 #include <dbus/dbus.h>
 #include <signal.h>

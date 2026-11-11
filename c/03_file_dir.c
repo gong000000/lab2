@@ -1,13 +1,5 @@
 /*
- * 3번 과제: 파일 및 디렉토리 관련 함수 연습
- *
- * 연습하는 함수:
- *   getcwd, mkdir, open, write, stat, read, close,
- *   opendir, readdir, closedir, rename, unlink, rmdir
- *
- * 실행:
- *   make bin/03_file_dir
- *   ./bin/03_file_dir
+ * 3번: 파일 및 디렉토리 관련 함수
  */
 #include <dirent.h>
 #include <errno.h>

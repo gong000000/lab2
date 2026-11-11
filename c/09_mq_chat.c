@@ -1,16 +1,8 @@
 /*
- * 9번 과제: POSIX 메시지 큐를 사용한 텍스트 채팅
+ * 9번: POSIX 메시지 큐 채팅
  *
- * 메시지 큐 이름:
- *   /lab2_chat_a2b : alice -> bob
- *   /lab2_chat_b2a : bob -> alice
- *
- * 사용법:
- *   ./bin/09_mq_chat --clean          # 이전 실행의 큐 정리
- *   터미널 1: ./bin/09_mq_chat alice
- *   터미널 2: ./bin/09_mq_chat bob
- *
- * 종료하려면 한쪽에서 quit을 입력한다.
+ * 사용법: ./bin/09_mq_chat alice|bob
+ *        ./bin/09_mq_chat --clean
  */
 #include <errno.h>
 #include <fcntl.h>
