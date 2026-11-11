@@ -24,13 +24,21 @@ lab2/
 │       ├── Cargo.toml
 │       └── src/main.rs
 └── c/
-    ├── Makefile             # 3~12번 C 프로그램 공통 빌드
+    ├── Makefile             # 3~11번 C 프로그램 공통 빌드
     ├── 03_file_dir.c        # 3번: 파일/디렉토리 함수 연습
     ├── 04_ls_r.c            # 4번: ls -R 구현
+    ├── 05_typing.c          # 5번: 타자 연습
+    ├── 06_process_signal.c  # 6번: 프로세스/시그널
+    ├── 07_ipc_practice.c    # 7번: IPC 연습
+    ├── 08_pipe_chat.c       # 8번: 파이프 채팅
+    ├── 09_mq_chat.c         # 9번: 메시지 큐 채팅
+    ├── 10_mmap_copy.c       # 10번: mmap 파일 복사
+    ├── 11_dbus_server.c     # 11번: DBus 서버
+    ├── 11_dbus_client.c     # 11번: DBus 클라이언트
     └── README.md            # 과제별 파일/핵심 함수 정리
 ```
 
-5번 이후의 자세한 구현 순서와 핵심 함수는
+5~11번의 자세한 구현 순서와 핵심 함수는
 [`docs/step-by-step.md`](docs/step-by-step.md)를 참고하세요.
 
 ## 빌드와 실행
@@ -65,17 +73,32 @@ A + B =
     10     12
 ```
 
-### 3~12번 — C 프로그램
-
-`c/` 디렉토리에 `03_file_dir.c`, `04_ls_r.c` 같은 파일을 만들면
-Makefile이 자동으로 `c/bin/` 아래에 실행 파일을 만듭니다.
+### 3~11번 — C 프로그램
 
 ```bash
 cd /mnt/c/Users/gong0000/Desktop/lab2/c
-make                    # c/*.c 전체 빌드
-make bin/04_ls_r        # 하나만 빌드
+make                    # 3~10번 + (DBus 패키지가 있으면) 11번 빌드
+make bin/09_mq_chat     # 하나만 빌드
+
 ./bin/03_file_dir       # 3번: 파일/디렉토리 함수 연습
 ./bin/04_ls_r .         # 4번: 현재 디렉토리를 ls -R처럼 출력
+./bin/05_typing         # 5번: 타자 연습
+./bin/06_process_signal # 6번: 프로세스/시그널
+./bin/07_ipc_practice   # 7번: IPC 연습
+./bin/08_pipe_chat alice
+./bin/09_mq_chat --clean
+./bin/10_mmap_copy 원본 대상
+```
+
+11번 DBus는 개발 패키지가 필요합니다.
+
+```bash
+sudo apt install -y libdbus-1-dev pkg-config dbus
+make bin/11_dbus_server bin/11_dbus_client
+dbus-run-session -- bash
+# 같은 셸에서 서버와 클라이언트 실행
+./bin/11_dbus_server &
+./bin/11_dbus_client "Hello"
 ```
 
 ## 실습 순서 체크리스트
@@ -84,14 +107,14 @@ make bin/04_ls_r        # 하나만 빌드
 - [x] **2.** Rust `Vec<T>`를 사용한 두 행렬의 덧셈
 - [x] **3.** 파일/디렉토리 관련 함수 연습
 - [x] **4.** 디렉토리 재귀 탐색 (`ls -R`와 동일한 결과)
-- [ ] **5.** 타자 연습 프로그램 (오타 횟수, 분당 타자수)
-- [ ] **6.** 프로세스/시그널 관련 함수 연습
-- [ ] **7.** 프로세스 간 통신(IPC) 함수 연습
-- [ ] **8.** 파이프 기반 텍스트 채팅
-- [ ] **9.** POSIX 메시지 큐 기반 텍스트 채팅
-- [ ] **10.** POSIX 공유 메모리/mmap 파일 복사
-- [ ] **11.** DBus 알림 메시지 서버-클라이언트
-- [ ] **12.** (팀) 간단한 쉘 프로그램
+- [x] **5.** 타자 연습 프로그램 (오타 횟수, 분당 타자수)
+- [x] **6.** 프로세스/시그널 관련 함수 연습
+- [x] **7.** 프로세스 간 통신(IPC) 함수 연습
+- [x] **8.** 파이프 기반 텍스트 채팅
+- [x] **9.** POSIX 메시지 큐 기반 텍스트 채팅
+- [x] **10.** POSIX 공유 메모리/mmap 파일 복사
+- [x] **11.** DBus 알림 메시지 서버-클라이언트
+- [ ] **12.** (팀) 간단한 쉘 프로그램 — 이번 범위에서 제외
 
 ## Git 작업 순서
 
