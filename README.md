@@ -87,7 +87,8 @@ make bin/09_mq_chat     # 하나만 빌드
 ./bin/07_ipc_practice   # 7번: IPC 연습
 ./bin/08_pipe_chat alice
 ./bin/09_mq_chat --clean
-./bin/10_mmap_copy 원본 대상
+echo "hello mmap" > source.txt
+./bin/10_mmap_copy source.txt copy.txt
 ```
 
 11번 DBus는 개발 패키지가 필요합니다.

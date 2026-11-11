@@ -383,9 +383,13 @@ ls /dev/mqueue
 
 ```bash
 make bin/10_mmap_copy
-./bin/10_mmap_copy 원본.txt 복사본.txt
-cmp 원본.txt 복사본.txt && echo "같음"
-sha256sum 원본.txt 복사본.txt
+
+# 원본 파일을 먼저 만들어야 한다.
+echo "hello mmap" > source.txt
+./bin/10_mmap_copy source.txt copy.txt
+
+cmp source.txt copy.txt && echo "같음"
+sha256sum source.txt copy.txt
 ```
 
 ---

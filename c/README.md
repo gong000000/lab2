@@ -58,9 +58,20 @@ make clean           # 실행 파일 삭제
 
 ## 10번 — mmap 파일 복사
 
+`원본.txt` 같은 예시 이름은 실제로 존재하는 파일이어야 합니다.
+테스트용 파일을 먼저 만들고 실행하세요.
+
 ```bash
-./bin/10_mmap_copy 원본.txt 복사본.txt
-cmp 원본.txt 복사본.txt && echo "같음"
+echo "hello mmap" > source.txt
+./bin/10_mmap_copy source.txt copy.txt
+cmp source.txt copy.txt && echo "같음"
+```
+
+이미 있는 파일로 테스트하려면:
+
+```bash
+./bin/10_mmap_copy 03_file_dir.c /tmp/copy.c
+cmp 03_file_dir.c /tmp/copy.c && echo "같음"
 ```
 
 ## 11번 — DBus 알림 서버/클라이언트
