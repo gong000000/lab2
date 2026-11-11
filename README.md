@@ -17,14 +17,21 @@
 lab2/
 ├── README.md
 ├── .gitignore
+├── docs/
+│   └── step-by-step.md      # 5~12번 상세 가이드
 ├── rust/
 │   └── matrix_add/          # 2번: Rust Vec<T> 행렬 덧셈
 │       ├── Cargo.toml
 │       └── src/main.rs
 └── c/
     ├── Makefile             # 3~12번 C 프로그램 공통 빌드
+    ├── 03_file_dir.c        # 3번: 파일/디렉토리 함수 연습
+    ├── 04_ls_r.c            # 4번: ls -R 구현
     └── README.md            # 과제별 파일/핵심 함수 정리
 ```
+
+5번 이후의 자세한 구현 순서와 핵심 함수는
+[`docs/step-by-step.md`](docs/step-by-step.md)를 참고하세요.
 
 ## 빌드와 실행
 
