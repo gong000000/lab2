@@ -1,0 +1,21 @@
+# Rust
+target/
+Cargo.lock
+
+# C build output
+c/bin/
+*.o
+*.out
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 강의 자료 PDF는 저장소에 올리지 않음
+*.pdf
