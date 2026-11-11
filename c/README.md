@@ -1,5 +1,7 @@
 # C Programs
 
+2번은 Rust라서 `rust/matrix_add`에 있습니다. 이 디렉토리는 3~11번 C 프로그램입니다.
+
 ## Build
 
 ```bash

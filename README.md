@@ -4,20 +4,21 @@
 
 ## 구성
 
-- `rust/matrix_add`: 2번 행렬 덧셈 (Rust)
-- `c/`: 3~11번 C 프로그램
-- 12번 팀 과제는 추후 진행
+- 2번: `rust/matrix_add` (Rust)
+- 3~10번: `c/` C 프로그램
+- 11번: `c/11_dbus_server.c`, `c/11_dbus_client.c`
+- 12번 팀 과제: 추후 진행
 
 ## 빌드
 
-### Rust
+### 2번 (Rust)
 
 ```bash
 cd rust/matrix_add
-cargo run
+cargo build
 ```
 
-### C
+### 3~11번 (C)
 
 ```bash
 cd c
@@ -34,6 +35,17 @@ sudo apt install -y libdbus-1-dev pkg-config dbus
 
 ## 실행
 
+### 2번
+
+```bash
+cd rust/matrix_add
+cargo run
+```
+
+행의 개수와 열의 개수를 입력한 뒤, 각 행의 값을 공백으로 구분해 입력합니다.
+
+### 3~10번
+
 ```bash
 cd c
 
@@ -48,5 +60,18 @@ cd c
 ```
 
 8번, 9번은 터미널 2개에서 각각 `alice`, `bob`으로 실행합니다.
-11번은 `dbus-run-session -- bash` 안에서 서버와 클라이언트를 실행합니다.
-실행 예시는 `c/README.md`에 있습니다.
+10번은 원본 파일이 먼저 있어야 합니다.
+
+### 11번
+
+```bash
+cd c
+dbus-run-session -- bash
+
+# 같은 셸 안에서
+./bin/11_dbus_server &
+./bin/11_dbus_client "Hello"
+```
+
+서버 쪽에 `[알림] Hello`가 출력됩니다.
+실행 예시는 `c/README.md`에도 있습니다.
