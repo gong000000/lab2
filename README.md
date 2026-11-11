@@ -88,12 +88,15 @@ make bin/04_ls_r        # 하나만 빌드
 
 ## Git 작업 순서
 
-```bash
-cd /mnt/c/Users/gong0000/Desktop/lab2
+빌드/실행은 WSL에서 하고, **Git 명령은 Windows PowerShell**에서 실행하는 것을 권장합니다.
+(WSL의 git에는 GitHub 로그인 정보가 없어서 push할 때 인증을 다시 요구할 수 있습니다.)
+
+```powershell
+cd C:\Users\gong0000\Desktop\lab2
 
 git status
 git add .
-git commit -m "feat: add matrix addition using Rust Vec"
+git commit -m "feat: add typing practice"
 git push
 ```
 
