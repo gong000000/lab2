@@ -1,6 +1,5 @@
 # Rust
 target/
-Cargo.lock
 
 # C build output
 c/bin/
